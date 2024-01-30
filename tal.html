@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tal.css">
+</head>
+
+
+
+
+
+<body>
+    <div>
+    <h1>Gæt et tal mellem 0 og 100</h1>
+    <input type="number" id="tal">
+    <button type="button" id="tjek">Tjek tal</button>
+    <p id="resultat"></p>
+    </div>
+
+ <script>
+    let computerGuess;
+        gaetTal();
+    function gaetTal() {
+        computerGuess = Math.round(Math.random() * 100);
+        console.log("computerGuess", computerGuess);
+    }
+
+document.querySelector("#tjek").addEventListener("click", () => {
+  let userGuess = document.querySelector("#tal").value;
+  userGuess = parseInt(userGuess);
+  console.log("userGuess", typeof userGuess);
+  //   numberOfGuesses++;
+
+  if (userGuess === computerGuess) {
+    alert("Tillykke!");
+    document.querySelector("#tjek").disabled = true;
+  } else if (userGuess < computerGuess) {
+    alert("For lavt. Prøv igen.");
+  } else {
+    alert("For højt. Prøv igen.");
+  }
+});
+    </script>
+
+
+
+</body>
+</html>
+
+
+
+
+<!-- Math.round() returnerer værdien af et tal afrundet til nærmeste heltel -->
+<!-- parseInt analyserer et strenargument og returnerer et heltal af den angivende radix -->

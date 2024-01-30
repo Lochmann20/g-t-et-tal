@@ -1,0 +1,17 @@
+
+body{
+    background-color: black;
+}
+
+div{
+    text-align: center;
+    border-radius: 25px;
+    background-color: red;
+    margin: 20%;
+    padding: 1%;
+}
+
+h1{
+    color: white;
+}
+
